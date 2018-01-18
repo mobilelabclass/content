@@ -142,6 +142,32 @@ Your label should now be centered in the Safe Area of the containing view:
 
 ![alt text][centered-label]
 
+---
+
+## Running an app on the device simulator
+
+To get a better sense of how our app will look and behave on actual hardware, we can run our code via Xcode’s [Simulator](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/iOS_Simulator_Guide/Introduction/Introduction.html).
+
+At the top left corner of Xcode, you’ll find a drop down menu for selecting [how and where you'd like to build your app](https://developer.apple.com/library/content/featuredarticles/XcodeConcepts/Concept-Targets.html#//apple_ref/doc/uid/TP40009328-CH4-SW1).
+
+![alt text][build-target]
+
+Make sure you do not have any physical iOS devices (iPhone, iPad) plugged into your computer. Click on the dropdown and you’ll see a list of possible **Simulator** targets:
+
+![alt text][build-targets-dropdown]
+
+Select **iPhone X** from the list of targets and then press the adjacent button with the play icon. This builds and runs your app on a simulated iPhone X.
+
+![alt text][build-and-run-button]
+
+It may take some time for the app to build and for the Simulator to run. You can see the current status of this process at the top of the Xcode toolbar. When the toolbar reads **"Running HelloMobileLab on iPhoneX"**, Simulator will have launched your app on a virtual iPhone X. If Simulator did not pop up as the topmost window on your computer, look for it in your dock.
+
+![alt text][running-app-in-simulator]
+
+With Simulator as the topmost window, click on **Hardware** in the toolbar. Play around with some of the menu options. Rotate the virtual device to see how **Auto Layout** responds based on the constraints we setup earlier.
+
+![alt text][simulator-hardware-settings]
+
 <!--
  Extra credit
 
@@ -184,3 +210,13 @@ Your label should now be centered in the Safe Area of the containing view:
 [set-equal-widths-constraint]:https://mobilelaboratory.s3.amazonaws.com/labs/1-xcode/Xcode13.jpg "Setting equal widths constraint"
 
 [centered-label]:https://mobilelaboratory.s3.amazonaws.com/labs/1-xcode/Xcode14.jpg "Centered label"
+
+[build-target]:https://mobilelaboratory.s3.amazonaws.com/labs/1-xcode/buildtarget.jpg "Build target"
+
+[build-targets-dropdown]:https://mobilelaboratory.s3.amazonaws.com/labs/1-xcode/Xcode15.jpg "Build targets dropdown"
+
+[build-and-run-button]:https://mobilelaboratory.s3.amazonaws.com/labs/1-xcode/build.jpg "Build and run button"
+
+[running-app-in-simulator]:https://mobilelaboratory.s3.amazonaws.com/labs/1-xcode/Xcode16.jpg "Running app in simulator"
+
+[simulator-hardware-settings]:https://mobilelaboratory.s3.amazonaws.com/labs/1-xcode/Xcode17.jpg "Simulator hardware settings"
