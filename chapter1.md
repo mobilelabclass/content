@@ -168,6 +168,58 @@ With Simulator as the topmost window, click on **Hardware** in the toolbar. Play
 
 ![alt text][simulator-hardware-settings]
 
+---
+
+## Running an app on hardware
+
+Simulator is an invaluable tool during development, but there is no replacement for running your app on actual hardware. When you start developing apps with certain iOS APIs, you will run into cases where simulator cannot emulate a physical device - for example when you want to use the device camera.
+
+To get started, make sure that your iOS device is up to date before connecting to your computer. Also make sure that you have an Apple ID or create one [here](appleid.apple.com).
+
+As described in the Apple docs for [Launching Your App on Devices](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/LaunchingYourApponDevices/LaunchingYourApponDevices.html):
+
+> All iOS, tvOS, and watchOS apps must be code signed and provisioned to launch on a device . . . Provisioning is the process of preparing and configuring an app to launch on devices and use app services.
+
+If this is your first app you will notice a warning in your Xcode project settings under the Signing section: **"Signing for [App Name] requires a development team"**. Click the button labeled **Add Account.**
+
+![alt text][signing-add-account]
+
+Sign-in with your Apple ID.
+
+![alt text][apple-id-sign-in]
+
+Xcode will create a team provisioning profile for your Apple ID:
+
+![alt-text][team-provisioning-profile]
+
+Back in your project settings, select the team that was just created for you.
+
+![alt-text][select-team-profile]
+
+Directly below where you selected your team, you may see an error - **"Failed to create provisioning profile - there are no devices registered on the developer website..."** This is okay - let’s register a device to resolve this error.
+
+![alt-text][provisioning-device-error]
+
+Connect your iOS device and accept any alerts asking you to "Trust This Computer?". The first time you connect your device with Xcode open, the application will take some time to prepare it for development. While this is happening, you will see a message at the top of Xcode that says **"Preparing debugger support for Jane Doe’s iPhone."** You can view additional information about the state of your device by clicking **Window - Devices and Simulators** in the toolbar. The following window will appear:
+
+![alt-text][device-manager]
+
+Once Xcode is finished preparing your device, select it from the build targets at the top left of the interface:
+
+![alt-text][build-target-physical-device]
+
+Make sure that your device is awake and unlocked. Click the adjacent button with the run button (with the play icon) or press **Command (&#8984;) + R** to build and run your app on your device. **Accept any pop-ups on your computer about codesign accessing your keychain.**
+
+At this point you may see an error in Xcode and an alert on your device with the heading "Untrusted developer". This is okay - you must establish trust for your developer account on your device before it can be run.
+
+![alt-text][untrusted-developer-xcode]
+
+![alt-text][untrusted-developer-iphone]
+
+To resolve the issue, open your Settings on your iOS deveice and navigate to **General > Device Management**. Select your Developer App certificate to trust it.
+
+Press the run (play) button again or **Command (&#8984;) + R** to launch your app on your device.
+
 <!--
  Extra credit
 
@@ -220,3 +272,21 @@ With Simulator as the topmost window, click on **Hardware** in the toolbar. Play
 [running-app-in-simulator]:https://mobilelaboratory.s3.amazonaws.com/labs/1-xcode/Xcode16.jpg "Running app in simulator"
 
 [simulator-hardware-settings]:https://mobilelaboratory.s3.amazonaws.com/labs/1-xcode/Xcode17.jpg "Simulator hardware settings"
+
+[signing-add-account]:https://mobilelaboratory.s3.amazonaws.com/labs/1-xcode/PhysicalDevice1.jpg "Signing - add account"
+
+[apple-id-sign-in]:https://mobilelaboratory.s3.amazonaws.com/labs/1-xcode/PhysicalDevice2-sign-in.jpg "Sign-in with Apple ID"
+
+[team-provisioning-profile]:https://mobilelaboratory.s3.amazonaws.com/labs/1-xcode/PhysicalDevice3-team.jpg "Team provisioning profile"
+
+[select-team-profile]:https://mobilelaboratory.s3.amazonaws.com/labs/1-xcode/PhysicalDevice4-select-team.jpg "Select team profile"
+
+[provisioning-device-error]:https://mobilelaboratory.s3.amazonaws.com/labs/1-xcode/PhysicalDevice5.jpg "Provisioning device error"
+
+[device-manager]:https://mobilelaboratory.s3.amazonaws.com/labs/1-xcode/PhysicalDevice6.jpg "Xcode device manager"
+
+[build-target-physical-device]:https://mobilelaboratory.s3.amazonaws.com/labs/1-xcode/PhysicalDevice-build.jpg "Xcode build target physical device"
+
+[untrusted-developer-iphone]:https://mobilelaboratory.s3.amazonaws.com/labs/1-xcode/untrusted_developer "Untrusted developer iphone"
+
+[untrusted-developer-xcode]:https://mobilelaboratory.s3.amazonaws.com/labs/1-xcode/untrusted_developer2.jpg "Untrusted developer xcode"
