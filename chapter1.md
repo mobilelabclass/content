@@ -4,7 +4,9 @@
 
 Download Xcode from the App Store [here](https://itunes.apple.com/us/app/xcode/id497799835?mt=12) and install.
 
-The easiest way to start a new iOS app is through the project templates provided by Xcode:
+The easiest way to start a new iOS app is through the project templates provided by Xcode.
+
+---
 
 ## Starting a new project
 
@@ -38,6 +40,36 @@ On the bottom of the screen you will see a select box with the text: **Create Gi
 
 Congrats! You're ready to start your first iOS project!
 
+---
+
+## Using Interface Builder & Storyboards
+
+As described in the [Apple docs](https://developer.apple.com/library/content/documentation/General/Conceptual/Devpedia-CocoaApp/Storyboard.html):
+> A storyboard is a visual representation of the user interface of an iOS application, showing screens of content and the connections between those screens.
+
+Xcode provides a visual editor called **Interface Builder** to help you modify your storyboards.
+
+With your project open in Xcode, select **Main.storyboard** from the column on the left. Interface Builder will load the storyboard that Xcode created for you when you selected the project template.
+
+![alt text][interface-builder-anatomy]
+
+In this editing mode, there are 3 main areas (highlighted in blue in the screenshot) that you'll use to modify your storyboard, from left to right:
+
+1. A scene graph which shows the hierarchy of components in your views.
+1. A canvas which shows the distinct views that make up your app - in this case only a single blank screen since you selected the Single View template. The canvas is where you build your interface by laying out UI widgets.
+1. A utility area with multiple tabs that provides information about the state of our user interface and a set of tools for modifying it. Among other things, this is where you will find UI widgets to drag into the canvas and where you will size and position elements by value.
+
+---
+
+## Adding a Label in Interface Builder
+
+<!--
+ Extra credit
+
+ Apple's official Getting Started Guide
+ https://developer.apple.com/library/content/referencelibrary/GettingStarted/DevelopiOSAppsSwift/BuildABasicUI.html
+-->
+
 <!--
   Image references
 -->
@@ -49,3 +81,5 @@ Congrats! You're ready to start your first iOS project!
 [single-view-app-template]: https://mobilelaboratory.s3.amazonaws.com/labs/1-xcode/Xcode3.jpg "Create a new single view app"
 
 [setting-up-a-new-project]: https://mobilelaboratory.s3.amazonaws.com/labs/1-xcode/Xcode4.jpg "New Xcode project settings"
+
+[interface-builder-anatomy]:https://mobilelaboratory.s3.amazonaws.com/labs/1-xcode/Xcode5.jpg "Interface builder anatomy"
