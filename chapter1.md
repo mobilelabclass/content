@@ -87,8 +87,6 @@ Double click the label, type **Hello Mobile Lab!**, and press enter. Recenter th
 
 ![alt text][drag-label]
 
-![alt text][centered-label]
-
 ---
 
 ## Styling and positioning a UILabel
@@ -101,7 +99,7 @@ With the label still selected, click the **Attributes Inspector** tab at the top
 
 Click on the **Font** field and select the **Custom** option from the font dropdown.
 
-Under the **Family** field, select **Papyrus** and under the **Size** field, select **32.**
+Under the **Family** field, select **Papyrus** ([Ryan Gosling's favorite](https://www.youtube.com/watch?v=jVhlJNJopOQ)) and under the **Size** field, select **32.**
 
 Under the **Alignment** field, select the icon that corresponds to center alignment.
 
