@@ -1,6 +1,6 @@
-# Introduction
+# Welcome to Mobile Lab 👩🏻‍🔬
 
-Welcome to Mobile Lab 👩🏻‍🔬 - a hands-on workshop where we explore the world beyond generic apps and push the boundaries of what’s possible on iOS hardware.
+Mobile Lab is a hands-on workshop where we explore the world beyond generic apps and push the boundaries of what’s possible on iOS hardware.
 
 In this class we will cover both the design and technical elements that pertain to end-to-end mobile app development.
 
