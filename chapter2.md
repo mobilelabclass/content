@@ -41,7 +41,7 @@ You should see the following screen:
 ![alt text][github-create-repository]
 
 * Enter **helloworld** under the the field **Repository name**
-* Enter a description of our [Chapter 1 - Hello Xcode](https://www.mobilelabclass.com/chapter1.html) project, for example: "First Xcode project" or "Single View Application with a label".
+* Enter a description for our [Chapter 1 - Hello Xcode](https://www.mobilelabclass.com/chapter1.html) project, e.g. "First Xcode project" or "Single View Application with a label".
 * Choose whether to make your code public or private. We'll keep it public for this exercise. To make your repository private you must have a paid Github account.
 * Make sure that the field labeled **Intialize this repository with a README** is **unchecked**
 * Click create repository
