@@ -6,7 +6,7 @@ In this class we will cover both the design and technical elements that pertain 
 
 Topics will include augmented reality, the Internet of Things, new interfaces for musical expression, voice interaction, wearables, and others.
 
-Class materials are available online at [mobilelabclass.com](/mobilelabclass.com) and downloadable as:
+Class materials are available online at [mobilelabclass.com](https://www.mobilelabclass.com/) and downloadable as:
 
 * [PDF](https://www.gitbook.com/download/pdf/book/mobilelab/class)
 
