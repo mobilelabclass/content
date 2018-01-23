@@ -1,7 +1,12 @@
 # Summary
 
 * [Introduction](README.md)
-* [1. Hello Xcode](chapter1.md)
-* [2. Git & Github](chapter2.md)
-* [Assignment Week1](assignment-week1.md)
+
+* [Week1](assignment-week1.md)
+* Labs
+  * [1. Hello Xcode](https://www.gitbook.com/book/mobilelab/class/edit#)
+
+  * [2. Git & Github](https://www.gitbook.com/book/mobilelab/class/edit#)
+
+
 
