@@ -1,7 +1,11 @@
 # Summary
 
 * [Introduction](README.md)
-* [1. Hello Xcode](chapter1.md)
-* [2. Git & Github](chapter2.md)
+* [Labs](labs.md)
+  * [hello-xcode.md](hello-xcode.md)
+  * [git-and-github.md](git-and-github.md)
+
 * [Assignment Week1](assignment-week1.md)
+
+
 
