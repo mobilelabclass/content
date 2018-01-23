@@ -6,6 +6,7 @@
   * Programming Environment Setup
   * Prototyping Tools
   * Swift Programming II
+
 # Labs
   * [Git & GitHub](labs/git-and-github.md)
 
