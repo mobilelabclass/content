@@ -1,3 +1,11 @@
 # Week 1
 
-Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper nulla non metus auctor fringilla. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+# Topics
+* Introduction to Mobile Lab
+* Affordances of Mobility
+* iOS Device Capabilities
+# Labs
+ * [Hello Xcode](labs/hello-xcode.md)
+ * [One Button Hookup](labs/one-button-hookup.md)
+
+ # Design Assignment

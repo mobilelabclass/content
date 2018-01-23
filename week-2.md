@@ -1,3 +1,14 @@
 # Week 2
 
-Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper nulla non metus auctor fringilla. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+# Topics
+* User Interaction and Feedback
+* Anatomy of an iOS App
+* Programming Environment Setup
+* Prototyping Tools
+* Swift Programming II
+
+# Labs
+ * [Git & GitHub](labs/git-and-github.md)
+
+ # Design Assignments
+ * Create a personal app icon
