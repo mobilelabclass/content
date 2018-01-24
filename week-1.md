@@ -1,13 +1,13 @@
 # Week 1
 
-# Topics
+# Topics 📋
   * Introduction to Mobile Lab
   * Affordances of Mobility
   * iOS Device Capabilities
 
-# Labs
+# Labs 🔬
  * [Hello Xcode](labs/hello-xcode.md)
  * [One Button Hookup](labs/one-button-hookup.md)
 
-# Design Assignment
+# Design Assignment 📐
  Create a 1Button app

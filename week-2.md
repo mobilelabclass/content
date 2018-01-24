@@ -1,14 +1,14 @@
 # Week 2
 
-# Topics
+# Topics 📋
   * User Interaction and Feedback
   * Anatomy of an iOS App
   * Programming Environment Setup
   * Prototyping Tools
-  * Swift Programming II
+  * Swift Programming I
 
-# Labs
+# Labs 🔬
   * [Git & GitHub](labs/git-and-github.md)
 
-# Design Assignments
+# Design Assignments 📐
   * Create a personal app icon
