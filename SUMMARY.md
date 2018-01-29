@@ -1,6 +1,7 @@
 # Summary
 
 * [Introduction](README.md)
+* [ITP Spring 2018](nyu-itp-2018.md)
 * [Week 1](week-1.md)
 * [Labs](labs.md)
   * [1. Hello Xcode](labs/hello-xcode.md)

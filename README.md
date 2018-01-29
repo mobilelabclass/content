@@ -14,5 +14,3 @@ Class materials are available online at [mobilelabclass.com](https://www.mobilel
 
 * [Mobi](https://www.gitbook.com/download/epub/book/mobilelab/class)
 
-Syllabus for NYU ITP Spring 2018 course can be found [here](http://mobilelaboratory.s3.amazonaws.com/MobileLabSp2018.pdf)
-
