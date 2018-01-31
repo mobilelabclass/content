@@ -6,5 +6,5 @@
 * [Labs](labs.md)
   * [1. Hello Xcode](labs/hello-xcode.md)
   * [2. One Button Hookup](labs/one-button-hookup.md)
+  * [3. Anatomy of an iOS app](labs/anatomy.md)
 * [Resources](resources.md)
-  
