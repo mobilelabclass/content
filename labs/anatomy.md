@@ -52,12 +52,12 @@ Apple describes some of a View's responsibilities as:
 > * **Drawing and animation**
 >   * Views draw content in their rectangular area using UIKit or Core Graphics.
 >   * Some view properties can be animated to new values.
->>>
+>
 > * **Layout and subview management**
 >   * Views may contain zero or more subviews.
 >   * Views can adjust the size and position of their subviews.
 >   * Use Auto Layout to define the rules for resizing and repositioning your views in response to changes in the view hierarchy.
->>>
+>
 > * **Event handling**
 >   * A view is a subclass of UIResponder and can respond to touches and other types of events.
 >   * Views can install gesture recognizers to handle common gestures.
@@ -101,11 +101,11 @@ As you can see, our ViewController [inherits](https://developer.apple.com/librar
 Apple's documentation describes a view controller’s main responsibilities as:
 
 > * Updating the contents of the views, usually in response to changes to the underlying data.
->>>
+>
 > * Responding to user interactions with views.
->>>
+>
 > * Resizing views and managing the layout of the overall interface.
->>>
+>
 > * Coordinating with other objects—including other view controllers—in your app.
 
 You can see some of these responsibilities in the source code for our ViewController.swift:
