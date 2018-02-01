@@ -1,6 +1,6 @@
 # Week 2
 
-# Topics 📋
+## Topics 📋
 * Anatomy of an iOS App
 * UI Design
 * User Interaction and Feedback
@@ -9,7 +9,7 @@
 * Swift Programming I
 
 
-# Labs 🔬
+## Labs 🔬
 * Auto Layout in Storyboards (will post link)
 
 * [Swift Programming](https://www.lynda.com/Swift-tutorials/Swift-4-Essential-Training/636121-2.html) - Download exercise files and complete video tutorials
@@ -32,7 +32,7 @@
 
 
 
-# Odds & Ends ⚗️
+## Odds & Ends ⚗️
 * Enroll in the Individual [Apple Developer Program](https://developer.apple.com/programs/enroll/)  
 
   * Will need to provide basic information
@@ -41,19 +41,19 @@
   * Required for submitting apps to the iTunes store 
   
 
-# Design Assignment 📐
-* Create a custom lock screen
+## Design Assignment 📐
 
-  * Create original UI design
-  * Needs to have 6 sequential inputs
-  * Needs to display status messages when appropriate, e.g. "Unlocked", "Try Again", etc.
-  * Only 3 attempts possible before app needs to be reset/restarted
-  * Look at [Unlock Screen Kit](https://github.com/mobilelabclass/mobile-lab-unlock-screen-kit) for reference and code
-  * May also look at [UI Basic Kit](https://github.com/mobilelabclass/mobile-lab-ui-basic-kit) for reference and code on possible ui elements for app
-  * Create new clean xcode project for assignment.
-  * Post github link of project on Slack #homework channel before the start of class
+### Lock Screen
+* Create original UI design
+* Needs to have 6 sequential inputs
+* Needs to display status messages when appropriate, e.g. "Unlocked", "Try Again", etc.
+* Only 3 attempts possible before app needs to be reset/restarted
+* Look at [Unlock Screen Kit](https://github.com/mobilelabclass/mobile-lab-unlock-screen-kit) for reference and code
+* May also look at [UI Basic Kit](https://github.com/mobilelabclass/mobile-lab-ui-basic-kit) for reference and code on possible ui elements for app
+* Create new clean xcode project for assignment.
+* Post github link of project on Slack #homework channel before the start of class
 
 
-# Additional References 📚
+## Additional References 📚
 * [Anatomy of an iOS app](labs/anatomy.md)
 * [Apple Swift Docs](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/GuidedTour.html#//apple_ref/doc/uid/TP40014097-CH2-ID1)
