@@ -10,6 +10,8 @@
 
 
 # Labs 🔬
+* Auto Layout in Storyboards (will post link)
+
 * [Swift Programming](https://www.lynda.com/Swift-tutorials/Swift-4-Essential-Training/636121-2.html) - Download exercise files and complete video tutorials
   * 1.3 Reviewing the AdventureSwift playgrounds
   * 3.1 Variables and constants
@@ -28,7 +30,6 @@
   * 5.6 The switch statement
   * 6.1 Basic functions  
 
-* Auto Layout in Storyboards (will post link)
 
 
 # Odds & Ends ⚗️
@@ -41,13 +42,13 @@
 
 # Design Assignment 📐
 * Create a custom lock screen
-  * Creating original UI design
+  * Create original UI design
   * Needs to have 6 sequential inputs
   * Needs to display status messages when appropriate, e.g. "Unlocked", "Try Again", etc.
   * Only 3 attempts possible before app needs to be reset/restarted
-  * Look at [Unlock Screen Kit](https://github.com/mobilelabclass/mobile-lab-unlock-screen-kit) for reference
-  * May also look at [UI Basic Kit](https://github.com/mobilelabclass/mobile-lab-ui-basic-kit) for reference on possible ui elements for design
-  * Create new xcode project for assignment, i.e. Code kit xcode project should be used for reference and logic.
+  * Look at [Unlock Screen Kit](https://github.com/mobilelabclass/mobile-lab-unlock-screen-kit) for reference and code
+  * May also look at [UI Basic Kit](https://github.com/mobilelabclass/mobile-lab-ui-basic-kit) for reference and code on possible ui elements for app
+  * Create new clean xcode project for assignment.
   * Post github link of project on Slack #homework channel before the start of class
 
 
