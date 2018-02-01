@@ -28,7 +28,7 @@
     * 5.5 While loops
     * 5.6 The switch statement
     * 6.1 Basic functions  
-    
+
   * Auto Layout in Storyboards (will post link)
 
 # Odds & Ends ⚗️
