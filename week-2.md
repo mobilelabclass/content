@@ -1,55 +1,56 @@
 # Week 2
 
 # Topics 📋
-  * Anatomy of an iOS App
-  * UI Design
-  * User Interaction and Feedback
-  * Prototyping Tools
-  * Programming Environment Setup
-  * Swift Programming I
-
+* Anatomy of an iOS App
+* UI Design
+* User Interaction and Feedback
+* Prototyping Tools
+* Programming Environment Setup
+* Swift Programming I
 
 
 # Labs 🔬
-  * [Swift Programming](https://www.lynda.com/Swift-tutorials/Swift-4-Essential-Training/636121-2.html) - Download exercise files and complete video tutorials
-    * 1.3 Reviewing the AdventureSwift playgrounds
-    * 3.1 Variables and constants
-    * 3.2 Logging and commenting
-    * 3.3 Type safety and inference
-    * 3.4 Swift operators
-    * 3.5 Basic strings
-    * 3.6 Core string methods
-    * 3.7 Working with numbers
-    * 3.8 Basic Booleans
-    * 4.1 Swift arrays
-    * 4.2 Core array methods
-    * 5.1 The if statement
-    * 5.4 Using for-in loops
-    * 5.5 While loops
-    * 5.6 The switch statement
-    * 6.1 Basic functions  
+* [Swift Programming](https://www.lynda.com/Swift-tutorials/Swift-4-Essential-Training/636121-2.html) - Download exercise files and complete video tutorials
+  * 1.3 Reviewing the AdventureSwift playgrounds
+  * 3.1 Variables and constants
+  * 3.2 Logging and commenting
+  * 3.3 Type safety and inference
+  * 3.4 Swift operators
+  * 3.5 Basic strings
+  * 3.6 Core string methods
+  * 3.7 Working with numbers
+  * 3.8 Basic Booleans
+  * 4.1 Swift arrays
+  * 4.2 Core array methods
+  * 5.1 The if statement
+  * 5.4 Using for-in loops
+  * 5.5 While loops
+  * 5.6 The switch statement
+  * 6.1 Basic functions  
 
-  * Auto Layout in Storyboards (will post link)
+* Auto Layout in Storyboards (will post link)
+
 
 # Odds & Ends ⚗️
-  * Enroll in the Individual [Apple Developer Program](https://developer.apple.com/programs/enroll/)  
-    * Will need to provide basic information
-    * Cost is $99/yr
-    * Required for user beta testing which we will do next week
-    * Required for submitting apps to the iTunes store 
+* Enroll in the Individual [Apple Developer Program](https://developer.apple.com/programs/enroll/)  
+  * Will need to provide basic information
+  * Cost is $99/yr
+  * Required for user beta testing which we will do next week
+  * Required for submitting apps to the iTunes store 
   
 
 # Design Assignment 📐
-  * Create a custom lock screen
-    * Creating original UI design
-    * Needs to have 6 sequential inputs
-    * Needs to display status messages when appropriate, e.g. "Unlocked", "Try Again", etc.
-    * Only 3 attempts possible before app needs to be reset/restarted
-    * Look at [Unlock Screen Kit](https://github.com/mobilelabclass/mobile-lab-unlock-screen-kit) for reference
-    * May also look at [UI Basic Kit](https://github.com/mobilelabclass/mobile-lab-ui-basic-kit) for reference on possible ui elements for design
-    * Create new xcode project for assignment, i.e. Code kit xcode project should be used for reference and logic.
-    * Post github link of project on Slack #homework channel before the start of class
+* Create a custom lock screen
+  * Creating original UI design
+  * Needs to have 6 sequential inputs
+  * Needs to display status messages when appropriate, e.g. "Unlocked", "Try Again", etc.
+  * Only 3 attempts possible before app needs to be reset/restarted
+  * Look at [Unlock Screen Kit](https://github.com/mobilelabclass/mobile-lab-unlock-screen-kit) for reference
+  * May also look at [UI Basic Kit](https://github.com/mobilelabclass/mobile-lab-ui-basic-kit) for reference on possible ui elements for design
+  * Create new xcode project for assignment, i.e. Code kit xcode project should be used for reference and logic.
+  * Post github link of project on Slack #homework channel before the start of class
+
 
 # Additional References 📚
-  * [Anatomy of an iOS app](labs/anatomy.md)
-  * [Apple Swift Docs](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/GuidedTour.html#//apple_ref/doc/uid/TP40014097-CH2-ID1)
+* [Anatomy of an iOS app](labs/anatomy.md)
+* [Apple Swift Docs](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/GuidedTour.html#//apple_ref/doc/uid/TP40014097-CH2-ID1)
