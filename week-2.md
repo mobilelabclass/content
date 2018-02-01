@@ -34,6 +34,7 @@
 
 # Odds & Ends ⚗️
 * Enroll in the Individual [Apple Developer Program](https://developer.apple.com/programs/enroll/)  
+
   * Will need to provide basic information
   * Cost is $99/yr
   * Required for user beta testing which we will do next week
@@ -42,6 +43,7 @@
 
 # Design Assignment 📐
 * Create a custom lock screen
+
   * Create original UI design
   * Needs to have 6 sequential inputs
   * Needs to display status messages when appropriate, e.g. "Unlocked", "Try Again", etc.
