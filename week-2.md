@@ -43,15 +43,16 @@
 
 ## Design Assignment 📐
 
-* **Lock Screen** 
+* **Lock Screen**  
+
   * Create original UI design
+  * Create a new "Single View App" Xcode project for assignment.
   * Needs to have 6 sequential inputs
   * Needs to display status messages when appropriate, e.g. "Unlocked", "Try Again", etc.
   * Only 3 attempts possible before app needs to be reset/restarted
   * Look at [Unlock Screen Kit](https://github.com/mobilelabclass/mobile-lab-unlock-screen-kit) for reference and code
   * May also look at [UI Basic Kit](https://github.com/mobilelabclass/mobile-lab-ui-basic-kit) for reference and code on possible ui elements for app
-  * Create new clean xcode project for assignment.
-  * Post github link of project on Slack #homework channel before the start of class
+  * Post github link of project on Slack #homework channel before the start of next class
 
 
 ## Additional References 📚
