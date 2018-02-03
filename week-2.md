@@ -10,7 +10,7 @@
 
 
 ## Labs 🔬
-* Auto Layout in Storyboards (will post link)
+* [Auto Layout in Storyboards](https://youtu.be/360YMsWphuM)
 
 * [Swift Programming](https://www.lynda.com/Swift-tutorials/Swift-4-Essential-Training/636121-2.html) - Download exercise files and complete video tutorials
   * 1.3 Reviewing the AdventureSwift playgrounds
