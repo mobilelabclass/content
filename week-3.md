@@ -22,12 +22,18 @@
 
 ## Reading 📖
   
+* [Effective Behavior Design](https://hackdesign.org/lessons/28)
+* [Why Behavior Design Is The Future of UX Design](https://www.inc.com/jason-hreha/heres-what-youre-getting-wrong-about-user-research.html)
+* [How Companies Learn Your Secrets](http://www.nytimes.com/2012/02/19/magazine/shopping-habits.html)
+* [Behavior Design](https://medium.com/@missytitus/behavior-design-be9d48aefeb0)
+* [How I Built This: Instagram](https://itunes.apple.com/us/podcast/how-i-built-this-with-guy-raz/id1150510297?mt=2&amp;i=1000375469570)
+
 
 ## Design Assignment 📐
 
 * **Behavior Design**  
 
-  * Select a personal behavior you wish to influence
+  * Select a behavior you wish to influence, for better or worse
   * Design an app which helps to achieve your objectives
   * Use the *Motivation*, *Ability* and *Triggers* framework to develop the app features
   * Consider the current affordances available for iOS (e.g. push notications, augmented reality, Apple Watch, etc.)
