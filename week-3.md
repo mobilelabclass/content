@@ -21,7 +21,7 @@
 
 
 
-## Reading 📖
+## Read & Listen 📖 🎧
   
 * [Effective Behavior Design](https://hackdesign.org/lessons/28)
 * [Why Behavior Design Is The Future of UX Design](https://www.inc.com/jason-hreha/heres-what-youre-getting-wrong-about-user-research.html)
@@ -34,11 +34,11 @@
 
 * **Behavior Design**  
 
-  * Select a behavior you wish to influence, for better or worse
+  * Select a behavior you wish to influence for better or worse, some ideas include:
+    * Help yourself or someone you know get better at something
+    * Exploit your power as app creator to trigger behavior in a dystopian world 
   * Design an app which helps to achieve your objectives
   * Use the *Motivation*, *Ability* and *Triggers* framework to develop the app features
   * Consider the current affordances available for iOS (e.g. push notications, augmented reality, Apple Watch, etc.)
   * Design 1-3 screens using any visual tool
   * Be prepared to present your app design in the next class (~4 min presentation)
-
-## Additional References 📚
