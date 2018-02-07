@@ -7,6 +7,8 @@
 
 ## Labs 🔬
 
+* [Swift Programming II](labs/swift-2.md)
+
 * Create a locked one button app and upload to iTunes connect for testing
 
   * Combine your lock screen and one button app
@@ -14,9 +16,8 @@
     * Start with a 1024x1024 resolution image
     * Use either [App Icon Resizer](https://resizeappicon.com/) or [IconKit](https://itunes.apple.com/us/app/iconkit-the-icon-resizer/id507135296?mt=12) to create different icon sizes
   * Upload app to iTunes connect and invite everyone in class to test (will post screencast)
-  * Post github link on #homework channel
+  * Post lock sequence and github link on #homework channel
 
-* [Swift Programming II](labs/swift-2.md)
 
 
 ## Reading 📖
