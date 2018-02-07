@@ -12,6 +12,7 @@
 * Create a locked one button app and upload to iTunes connect for testing
 
   * Combine your lock screen and one button app
+  * Add a lock button to your one button app screen that relocks the app
   * Design an icon for the app
     * Start with a 1024x1024 resolution image
     * Use either [App Icon Resizer](https://resizeappicon.com/) or [IconKit](https://itunes.apple.com/us/app/iconkit-the-icon-resizer/id507135296?mt=12) to create different icon sizes
