@@ -12,3 +12,6 @@
   * [2.2 Auto Layout](labs/autolayout.md)
   * [2.3 Swift Programming I](labs/swift-1.md)
   * [3.1 Swift Programming II](labs/swift-2.md)
+  * [3.2 Auto Layout Offsets](labs/autolayout-offsets.md)
+  * [3.3 Multi ViewControllers](labs/multi-viewcontrollers.md)
+  * [3.4 App Icon and Name](labs/app-icon-name.md)
