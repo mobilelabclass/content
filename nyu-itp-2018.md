@@ -30,7 +30,7 @@ As part of the design process, we’ll host workshops and guest critiques with d
 
 3. Changing User Behavior, User Testing, Swift Programming II
 
-4. Data and Networking
+4. Animation
 
 5. Vision and Graphics, Camera Input
 
@@ -38,7 +38,7 @@ As part of the design process, we’ll host workshops and guest critiques with d
 
 7. Non-Visual Interfaces, Wearables
 
-8. Internet of Things
+8. Data and Networking, Internet of Things
 
 9. Installation and Performance, Musical Interface
 
