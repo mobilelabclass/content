@@ -2,7 +2,6 @@
 
 ## Topics 📋
 * Changing User Behavior
-* User Testing
 * Swift Programming II
 
 ## Labs 🔬

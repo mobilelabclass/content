@@ -28,9 +28,9 @@ As part of the design process, we’ll host workshops and guest critiques with d
 
 2. Anatomy of an iOS App, UI Design, User Interaction and Feedback, Development Tools, Prototyping Tools, Swift Programming I
 
-3. Changing User Behavior, User Testing, Swift Programming II
+3. Changing User Behavior, Swift Programming II
 
-4. Animation
+4. Animation, User Testing
 
 5. Vision and Graphics, Camera Input
 
