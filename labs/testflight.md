@@ -40,9 +40,9 @@ The SKU can be anything.
 
 ## Upload app to iTunes Connect
 
-Add this key to the *info.plist*
+Add the **App Uses Non-Exempt Encryption** key and set it to **No** in the *info.plist*
 
-Make sure to **SAVE** your project after update.
+Make sure to *save* your project after update.
 
 ![screen shot 2018-02-18 at 9 26 40 am](https://user-images.githubusercontent.com/206423/36352952-fd35b2de-148d-11e8-9d1b-49847acc7d3d.png)
 

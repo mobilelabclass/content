@@ -14,7 +14,7 @@
 
 * Download and review [gestures code kit](https://github.com/mobilelabclass/mobile-lab-gesture-kit)
 
-* Setup TestFlight and deploy animation app to iTunes connect for testing. [Follow tutorial](labs/testflight.md)
+* Setup TestFlight and deploy your animation app to iTunes Connect for testing. [Follow tutorial](labs/testflight.md)
 
 ## Read 📖 
   
@@ -30,4 +30,5 @@
   * Refer to nature, observations, story-telling, etc.
   * Use Animation/Motion, Gestures, Haptics
   * Consider the criteria for “Good Experiences” - Affordances, Signifiers, Mappings, Feedback, Conceptual Models & Metaphors
+  * App needs to have a custom icon and name.
   * *APP MUST BE UPLOADED TO TESTFLIGHT AND SHARED WITH CLASSMATES BEFORE THE START OF CLASS*
