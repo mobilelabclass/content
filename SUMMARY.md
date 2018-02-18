@@ -16,3 +16,4 @@
   * [3.2 Auto Layout Offsets](labs/autolayout-offsets.md)
   * [3.3 Multi ViewControllers](labs/multi-viewcontrollers.md)
   * [3.4 App Icon and Name](labs/app-icon-name.md)
+  * [4.1 App Icon and Name](labs/testflight.md)

@@ -12,9 +12,9 @@
     * [Prototyping Animations in Swift](http://mathewsanders.com/prototyping-iOS-iPhone-iPad-animations-in-swift/)
     * [Animations in Swift](http://mathewsanders.com/animations-in-swift-part-two/)
 
-* Download and review gestures code kit (will post soon)
+* Download and review [gestures code kit](https://github.com/mobilelabclass/mobile-lab-gesture-kit)
 
-* Setup TestFlight and deploy animation app to iTunes connect for testing (will post tutorial soon)
+* Setup TestFlight and deploy animation app to iTunes connect for testing. [Follow tutorial](labs/testflight.md)
 
 ## Read 📖 
   

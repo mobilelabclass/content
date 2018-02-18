@@ -16,7 +16,6 @@
   * Design an icon and add it to your app, this [screencast](labs/app-icon-name.md) will walk through the process
     * Start with a 1024x1024 resolution image
     * Use either [App Icon Resizer](https://resizeappicon.com/) or [IconKit](https://itunes.apple.com/us/app/iconkit-the-icon-resizer/id507135296?mt=12) to create different icon sizes
-  * Upload app to iTunes connect and invite everyone in class to test (will post tutorial)
   * Post lock sequence and github link on #homework channel
 
 
