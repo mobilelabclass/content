@@ -6,6 +6,7 @@
 * [Week 2](week-2.md)
 * [Week 3](week-3.md)
 * [Week 4](week-4.md)
+* [Week 5](week-5.md)
 * Labs
   * [1.1 Hello Xcode](labs/hello-xcode.md)
   * [1.2 One Button Hookup](labs/one-button-hookup.md)
@@ -17,3 +18,4 @@
   * [3.3 Multi ViewControllers](labs/multi-viewcontrollers.md)
   * [3.4 App Icon and Name](labs/app-icon-name.md)
   * [4.1 TestFlight](labs/testflight.md)
+* [Resources](resources.md)

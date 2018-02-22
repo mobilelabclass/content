@@ -10,3 +10,6 @@ Design and development resources.
 
 ## Design
 * [Google Fonts](https://fonts.google.com/)
+
+## Animation
+* [After Effects for iOS](http://www.brianadvent.com/dynamic-content-in-animations-with-lottie/)

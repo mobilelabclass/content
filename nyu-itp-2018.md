@@ -32,13 +32,13 @@ As part of the design process, we’ll host workshops and guest critiques with d
 
 4. Animation, User Testing
 
-5. Vision and Graphics, Camera Input
+5. Data Persistence & Networking, Developer Tools
 
-6. Augmented Reality
+6. Vision and Graphics, Camera Input
 
-7. Non-Visual Interfaces, Wearables
+7. Augmented Reality
 
-8. Data and Networking, Internet of Things
+8. Non-Visual Interfaces, Wearables
 
 9. Installation and Performance, Musical Interface
 
