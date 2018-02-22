@@ -1,7 +1,7 @@
 # Week 5
 
 ## Topics 📋
-* Data persistence & Networking
+* Data Persistence & Networking
 * Developer Tools
 
 ## Labs 🔬
@@ -12,5 +12,5 @@
 
 * **Multiplayer game controller**  
 
-  * Update the [Web Socket Kit](https://github.com/mobilelabclass/mobile-lab-websocket-kit) with custom ui controls or gestures which map signals sent to the server.
+  * Update the [Web Socket Kit](https://github.com/mobilelabclass/mobile-lab-websocket-kit) with custom ui controls or gestures which map to signals sent to the server.
   * More to come...
