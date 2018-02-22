@@ -13,4 +13,4 @@
 * **Multiplayer game controller**  
 
   * Update the [Web Socket Kit](https://github.com/mobilelabclass/mobile-lab-websocket-kit) with custom ui controls or gestures which map to signals sent to the server.
-  * More to come...
+  * Be sure to run *pod install* within the project directory after installing CocoaPods.
