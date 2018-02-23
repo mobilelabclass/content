@@ -14,7 +14,7 @@
 
 **Multiplayer game controller**
 
-Next week we'll reveal a multiplayer game that you'll all play together as a class. We have already written the game server - you will each create your own game controller to send it commands over websockets.
+Next week we'll reveal a multiplayer game that you'll all play together as a class. We have already written the game server - you will each create your own game controller to send the server commands over websockets.
 
 * Create your own multiplayer game controller using the [Web Socket Kit](https://github.com/mobilelabclass/mobile-lab-websocket-kit).
 * Your controller will be used to move an avatar around a level using a simple communications protocol - the structure of a valid message is as follows:
