@@ -89,7 +89,7 @@ Next week we'll reveal a multiplayer game that you'll all play together as a cla
 
 * Save the image url in the UserDefaults so it gets reloaded when the app restarts.
 
-* Deploy your app via TestFlight before the start of class.
+* **Deploy your app via TestFlight before the start of class**.
 
 * The following are important:
   * Install Cocoapods. Instructions are available [here](www.cocoapods.org)
