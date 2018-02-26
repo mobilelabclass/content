@@ -78,7 +78,14 @@ Next week we'll reveal a multiplayer game that you'll all play together as a cla
 
 * After setting the profile image, send the image url string to the game server.
   ```swift
+    // First get the playerId from user defaults and check it is valid.
+    guard let playerId = self.defaults.string(forKey: playerIdKey) else {
+        presentAlertMessage(message: "Enter Player Id")
+        return
+    }
+
     // Send the playerId and dog image url string in this format.
+    // Make sure the dogImageURLString variable is in scope.
     let message = "\(playerId), profile_image:\(dogImageURLString)"
     socket?.write(string: message) {
         print("⬆️  profile image sent message to server: ", message)
