@@ -92,8 +92,11 @@ Next week we'll reveal a multiplayer game that you'll all play together as a cla
 * **Deploy your app via TestFlight before the start of class**.
 
 * The following are important:
-  * Install Cocoapods. Instructions are available [here](www.cocoapods.org)
+  * Review the CocoaPods tutorial in the Labs section. The example is for Firebase, but the steps are the same for any library.
   * Run **pod install** from the command line within the project directory
+  * Be sure to run **pod install** anytime an update is made to the Podfile. e.g. After adding the Alamofire, SwiftyJSON, and SDWebImage pods.
+  * See the Github page for the libraries to get the correct pod version. e.g. **pod 'Alamofire', '~> 4.6'**
   * **Open the code kit from .xcworkspace and NOT .xcodeproj**
+  * Remember to include the *import* statements in your swift code to use the library routines.
 
 [controller-directions]:https://mobilelaboratory.s3.amazonaws.com/week5/directions.png "controller-directions"
