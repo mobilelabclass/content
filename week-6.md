@@ -15,6 +15,8 @@
 
 Design and build an AR experience using the camera, Core Image filters and any other iOS frameworks.
 
+* Refer to the [camera code kit](https://github.com/mobilelabclass/mobile-lab-camera-kit)
+
 * Design the experience for a specific use case, this can be real or fictional, useful or not useful, think about **“What are you augmenting?”** 
 
 * UI must have one or more pieces of **realtime contextual** information 
@@ -28,5 +30,5 @@ Design and build an AR experience using the camera, Core Image filters and any o
 ## Additional References 📚
 
 * [Core Image Filter Reference](https://developer.apple.com/library/content/documentation/GraphicsImaging/Reference/CoreImageFilterReference/index.html)
-* [GraphicsImaging](https://developer.apple.com/library/content/documentation/GraphicsImaging/Conceptual/CoreImaging/ci_tasks/ci_tasks.html)
+* [Processing Images](https://developer.apple.com/library/content/documentation/GraphicsImaging/Conceptual/CoreImaging/ci_tasks/ci_tasks.html)
 * [Filterpedia](https://github.com/FlexMonkey/Filterpedia)
