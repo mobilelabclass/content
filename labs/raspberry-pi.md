@@ -135,7 +135,7 @@ Back in terminal, running our script makes our servo move back and forth contino
 
 ## Bluetooth Setup on Raspberry Pi
 
-To communicate with our Pi, we'll use the [Bleno](https://github.com/noble/bleno) javascript library. Bleno uses the [BlueZ](http://www.bluez.org/) Bluetooth protocol stack. As of the writing of this lab (April 2018), BlueZ comes preinstalled on Raspberry Pi.
+We'll use the [Bleno](https://github.com/noble/bleno) javascript library to turn our Pi into a bluetooth peripheral. Bleno uses the [BlueZ](http://www.bluez.org/) Bluetooth protocol stack. As of the writing of this lab (April 2018), BlueZ comes preinstalled on Raspberry Pi.
 
 To get started, we'll first need to stop the bluetooth daemon. Make sure that the keyboard and mouse you are using are wired before running the following command:
 
@@ -219,7 +219,7 @@ It's alive! Hooray! Now we can start advertising our Raspberry Pi as a Bluetooth
 
 Add the following to the top of index.js:
 ```javascript
-var name = 'My Awesome BTLE Device';
+var name = 'Awesome Bluetooth Servo';
 var uuid = '5f694e5e-9af7-4ecd-a12b-80e1e3b2e480';
 ```
 
@@ -248,48 +248,86 @@ bleno.on('stateChange', function(newState) {
 });
 ```
 
-Next, we must define the services available on our device. A **Service** is made up of **Characteristics**. From the [bleno docs](https://www.npmjs.com/package/bleno) working backwards:
+## Bluetooth Advertising, Services and Characteristics
+
+To communicate with the outside world, our Raspberry Pi needs to meet two specifications - [General Access Profile (GAP)](https://learn.adafruit.com/introduction-to-bluetooth-low-energy/gap) and [Generic Attribute Profile (GATT)](https://learn.adafruit.com/introduction-to-bluetooth-low-energy/gatt).
+
+Together these specifications define how devices makes themselves discoverable and how two BLE devices transfer data back and forth.
+
+We recommend reading Adafruit's [Intro to Bluetooth](https://learn.adafruit.com/introduction-to-bluetooth-low-energy) for more background on how GAP and GATT work.
+
+TL;DR
+
+* BLE devices advertise themselves according to their role - **peripheral device** (e.g. Raspberry Pi) or **central device** (e.g. iPhone). In the previous section we started advertising our Raspberry Pi with the bleno library.
+
+* Devices communicate according to a client/server relationship, where the central device is the client and the peripheral is the server. The client initiates communication (called a GATT transaction) to which the server may respond.
+
+
+* Data is exchanged based on the concept of **Profiles**, **Services**, and **Characteristics**.
+  
+  * **Profile** - a collection of Services
+
+  * **Service** - Identitified by a unique UUID, services break up data into logical entities. The full list of officially adopted BLE Services is available [here](https://www.bluetooth.com/specifications/gatt/services). Services can have one or more pieces of data - each of which makes up a Characteristic.
+
+  * **Characteristic** - Encapsulates a single data point, for example a sensor reading.
+
+Diagram from Adafruit's [Intro to Bluetooth](https://learn.adafruit.com/introduction-to-bluetooth-low-energy).
+
+![alt-text][ble-diagram]
+
+
+Defining Services and Characteristics in bleno is straightforward. Add the following to index.js to define our servo service and servo position characteristic:
 
 ```javascript
-var Characteristic = bleno.Characteristic;
- 
-var characteristic = new Characteristic({
-    uuid: 'fffffffffffffffffffffffffffffff1', // or 'fff1' for 16-bit
-    properties: [ ... ], // can be a combination of 'read', 'write', 'writeWithoutResponse', 'notify', 'indicate'
-    secure: [ ... ], // enable security for properties, can be a combination of 'read', 'write', 'writeWithoutResponse', 'notify', 'indicate'
-    value: null, // optional static value, must be of type Buffer - for read only characteristics
-    descriptors: [
-        // see Descriptor for data type
-    ],
-    onReadRequest: null, // optional read request handler, function(offset, callback) { ... }
-    onWriteRequest: null, // optional write request handler, function(data, offset, withoutResponse, callback) { ...}
-    onSubscribe: null, // optional notify/indicate subscribe handler, function(maxValueSize, updateValueCallback) { ...}
-    onUnsubscribe: null, // optional notify/indicate unsubscribe handler, function() { ...}
-    onNotify: null, // optional notify sent handler, function() { ...}
-    onIndicate: null // optional indicate confirmation received handler, function() { ...}
-});
-```
+  var PrimaryService = bleno.PrimaryService;
+  var Characteristic = bleno.Characteristic;
+  var Descriptor = bleno.Descriptor;
 
-Defining our service:
-
-```javascript
-var PrimaryService = bleno.PrimaryService;
- 
-var primaryService = new PrimaryService({
-    uuid: 'fffffffffffffffffffffffffffffff0', // or 'fff0' for 16-bit
+  var myServoService = new PrimaryService({
+    uuid: '8b6a02cc-e6cf-4af9-9138-3356913b8a14',
     characteristics: [
-        // see Characteristic for data type
+      new Characteristic({
+          uuid: '316cd3b8-4303-4d30-81c4-59c2774668e5',
+          properties: ['read', 'write'],
+          descriptors: [
+              new bleno.Descriptor({
+                  uuid: '169c58d3-3058-45bc-b8c2-e132c864b8d5',
+                  value: 'servo position'
+              })
+          ]
+      })
     ]
+  });
+```
+
+```javascript
+bleno.on('advertisingStart', function(err) {
+  if (!err) {
+      console.log('Started advertising device with uuid', uuid);
+
+  } else {
+    console.log('Error advertising our BLE device!', err);
+  }
 });
 ```
+## Debugging Bluetooth
+The LightBlue Explorer app for iOS is a great way to debug BLE devices. You can download it on [the App Store](https://itunes.apple.com/us/app/lightblue-explorer/id557428110?mt=8). The app allows you to scan for and connect to all BLE devices around you. Once connected, you have a detailed view of all the device's profiles, and can even read / write values to characteristics.
+
+## Bluetooth on iOS with CoreBluetooth
+
+Apple Docs:
+https://developer.apple.com/library/content/documentation/NetworkingInternetWeb/Conceptual/CoreBluetooth_concepts/AboutCoreBluetooth/Introduction.html
+
+https://developer.apple.com/documentation/corebluetooth
+
 
 ## Further reading
 * https://medium.com/@superlopuh/raspberry-pi-ios-communication-in-bluetooth-c7599e257f2
 
 
+<!--
+  Image references
+-->
 
-
-
-
-
+[ble-diagram]: https://cdn-learn.adafruit.com/assets/assets/000/013/828/large1024/microcontrollers_GattStructure.png?1390836057 "BLE Diagram"
 
