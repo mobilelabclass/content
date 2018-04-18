@@ -12,4 +12,4 @@ Final project - User Testing
 * User test your app (at least 3 users, one must not be ITP)
 * Modify your app based on user feedback
 * Be prepared to discuss your findings for next class
-* App name & short description
+* Provide app name & short description
