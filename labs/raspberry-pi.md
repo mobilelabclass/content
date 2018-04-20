@@ -12,7 +12,12 @@ The hardware setup for this lab is quite simple - connecting a servo to the Rasp
 
 In our setup, we power our Raspberry Pi from the +5.1V micro USB supply.
 
-All we need to do is connect 3 wires from the servo to 3 GPIO pins on the Pi. The red wire goes to +5V, the black wire to ground, and the yellow (control) wire to pin #18. Adafruit has a detailed write-up on how to setup this simple circuit [here](https://learn.adafruit.com/adafruits-raspberry-pi-lesson-8-using-a-servo-motor/hardware)
+All we need to do is connect 3 wires from the servo to 3 GPIO pins on the Pi. The red wire goes to +5V, the black wire to ground, and the yellow (control) wire to pin #18. Your circuit should look like the following: 
+
+![alt-text][raspberry-pi-servo-circuit]
+
+
+Adafruit has a detailed write-up on how to setup this simple circuit [here](https://learn.adafruit.com/adafruits-raspberry-pi-lesson-8-using-a-servo-motor/hardware)
 
 To read more about the various pins on the Pi, visit the [Pinout website](https://pinout.xyz).
 
@@ -232,7 +237,6 @@ if (state === 'poweredOn') {
   bleno.startAdvertising(name, [uuid]);
 } else {
   bleno.stopAdvertising();
-}
 ```
 
 In its entirety, the block should look like this:
@@ -276,29 +280,27 @@ Diagram from Adafruit's [Intro to Bluetooth](https://learn.adafruit.com/introduc
 ![alt-text][ble-diagram]
 
 
-Defining Services and Characteristics in bleno is straightforward. Add the following to index.js to define our servo service and servo position characteristic:
+Defining Services and Characteristics in bleno is straightforward. Add the following to index.js to define our **servo service** and **servo position characteristic**:
 
 ```javascript
   var PrimaryService = bleno.PrimaryService;
   var Characteristic = bleno.Characteristic;
-  var Descriptor = bleno.Descriptor;
+
+  var serviceUuid = 'e853db91-e787-4eeb-ae7c-536d689f5741';
+  var characteristicUuid = '01ad6336-32b5-499c-9130-3f989684044c';
 
   var myServoService = new PrimaryService({
-    uuid: '8b6a02cc-e6cf-4af9-9138-3356913b8a14',
+    uuid: serviceUuid,
     characteristics: [
       new Characteristic({
-          uuid: '316cd3b8-4303-4d30-81c4-59c2774668e5',
+          uuid: characteristicUuid,
           properties: ['read', 'write'],
-          descriptors: [
-              new bleno.Descriptor({
-                  uuid: '169c58d3-3058-45bc-b8c2-e132c864b8d5',
-                  value: 'servo position'
-              })
-          ]
       })
     ]
   });
 ```
+
+Also add the following lines to debug issues with advertising our device:
 
 ```javascript
 bleno.on('advertisingStart', function(err) {
@@ -313,12 +315,86 @@ bleno.on('advertisingStart', function(err) {
 ## Debugging Bluetooth
 The LightBlue Explorer app for iOS is a great way to debug BLE devices. You can download it on [the App Store](https://itunes.apple.com/us/app/lightblue-explorer/id557428110?mt=8). The app allows you to scan for and connect to all BLE devices around you. Once connected, you have a detailed view of all the device's profiles, and can even read / write values to characteristics.
 
+Run the javascript file on our Raspberry Pi:
+
+```shell
+  sudo node index.js
+```
+
+In the LightBlue Explorer app, you should be able to see your device:
+
+![alt-text][bluetooth-app]
+
+Tapping on "My Awesome Servo" connects to the peripheral and displays additional information:
+
+![alt-text][bluetooth-app2]
+
+
 ## Bluetooth on iOS with CoreBluetooth
 
-Apple Docs:
-https://developer.apple.com/library/content/documentation/NetworkingInternetWeb/Conceptual/CoreBluetooth_concepts/AboutCoreBluetooth/Introduction.html
+Bluetooth on iOS is implemented via the [CoreBluetooth](https://developer.apple.com/library/content/documentation/NetworkingInternetWeb/Conceptual/CoreBluetooth_concepts/AboutCoreBluetooth/Introduction.html) framework. Code for the iOS portion of this lab is available on [github](https://github.com/mobilelabclass/mobile-lab-raspberry-pi-kit).
 
-https://developer.apple.com/documentation/corebluetooth
+In our main View Controller, we create an instance of  [CBCentralManager](https://developer.apple.com/documentation/corebluetooth/cbcentralmanager) and assign the view controller as the manager's delegate.
+
+```swift
+  centralManager = CBCentralManager(delegate: self, queue: nil)
+```
+
+We also declare that our View Controller implements the [CBCentralManagerDelegate](https://developer.apple.com/documentation/corebluetooth/cbcentralmanagerdelegate) protocol at the top of our file:
+
+```swift
+  class ViewController: UIViewController, CBCentralManagerDelegate {
+  }
+```
+
+As stated in the official docs, the optional methods of the CBCentralManagerDelegate protocol allow the delegate to monitor the discovery, connectivity, and retrieval of peripheral devices. The only required method of the protocol indicates the availability of the central manager, and is called when the central manager’s state is updated.
+
+We implement the required protocol method in our view controller:
+
+```swift
+func centralManagerDidUpdateState(_ central: CBCentralManager) {
+  if (central.state == .poweredOn) {
+    // Scan for all peripherals
+    central.scanForPeripherals(withServices: nil, options: [CBCentralManagerScanOptionAllowDuplicatesKey: false])
+  }
+}
+```
+
+This method is called whenever the state of our central manager changes. In the method we check whether the new state is "powered on" and call a method on the central manager to scan for bluetooth peripherals if the condition is true.
+
+To be informed when peripherals are discovered, we implement another method of the CentralManagerDelegate protocol:
+
+```swift
+func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral, advertisementData: [String : Any], rssi RSSI: NSNumber) {
+  if (peripheral.name == PERIPHERAL_NAME) {
+    // Assign peripheral to myPi
+    myPi = peripheral
+          
+    // Connect to the peripheral
+    centralManager?.connect(peripheral, options: nil)
+  }
+}
+```
+
+In the above block of code, we check whether the discovered peripheral's name matches the name we assigned our Raspberry Pi - "My Awesome Servo". If it does, we assign the peripheral to a variable and call another method on the central manager which attempts to connect to it.
+
+You may have started to notice that the process for discovering and interacting with bluetooth peripherals follows an asynchronous pattern - we make a request and at some point in the future the request returns. When it returns, the response may contain some new information that we can act upon.
+
+Our flow so far looks like the following:
+
+![alt-text][ios-bluetooth-flow1]
+
+In our view controller we make requests like "scan for peripherals" and at some time in the future, our associated delegate method gets called - "did discover peripheral". By following this pattern down the hierarchy of Peripheral- Services - Characteristics, we eventually work our way to the individual characteristics we want to interface with. In our case, the servo position characterstic we created earlier.
+
+The complete flow for getting a handle on the servo position characteristic looks like the following:
+
+![alt-text][ios-bluetooth-flow2]
+
+Once we have a reference to a characteristic, we can save it to a variable for use in our application. In the example app we have a slider that we use to control servo position. In a
+
+
+
+
 
 
 ## Further reading
@@ -331,3 +407,14 @@ https://developer.apple.com/documentation/corebluetooth
 
 [ble-diagram]: https://cdn-learn.adafruit.com/assets/assets/000/013/828/large1024/microcontrollers_GattStructure.png?1390836057 "BLE Diagram"
 
+[bluetooth-app]: http://mobilelaboratory.s3.amazonaws.com/IoT/lightblue-1.png "Bluetooth app screenshot"
+
+[bluetooth-app2]: http://mobilelaboratory.s3.amazonaws.com/IoT/lightblue-3.png "Bluetooth app screenshot 2"
+
+[ios-bluetooth-flow1]:http://mobilelaboratory.s3.amazonaws.com/IoT/flow1.png
+"iOS bluetooth flow 1"
+
+[ios-bluetooth-flow2]:http://mobilelaboratory.s3.amazonaws.com/IoT/flow2.png
+"iOS-bluetooth-flow-2"
+
+[raspberry-pi-servo-circuit]:http://mobilelaboratory.s3.amazonaws.com/IoT/pi-diagram.png "Raspberry pi servo circuit"
