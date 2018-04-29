@@ -14,6 +14,7 @@
 * [Week 10](week-10.md)
 * [Week 11](week-11.md)
 * [Week 12](week-12.md)
+* [Week 13](week-13.md)
 * Labs
   * [1.1 Hello Xcode](labs/hello-xcode.md)
   * [1.2 One Button Hookup](labs/one-button-hookup.md)
