@@ -1,7 +1,3 @@
-# \# Hello
-
-
-
 # ITP Spring 2018
 
 **Meeting Time**  
